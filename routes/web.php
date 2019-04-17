@@ -41,6 +41,4 @@ Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 Route::resource('projects', 'ProjectsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
-Route::get('test',function (\App\Models\Topic $topic){
-    dd( $topic::find(1)->category );
-});
+Route::resource('categories','CategoriesController',['only'=>['show']]);
